@@ -21,7 +21,19 @@
                 <button>Ver Ofertas</button>
             </div>
         </div>
-        <div class="nav-bar flex items-center h-50">
+        <div class="nav-bar flex items-center justify-between h-50">
+        <div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav class="menu">
+
+                <a href="#">Cerveza</a>
+                <a href="#">Coctel</a>
+                <a href="#">Pisco</a>
+                <a href="#">Espumantes</a>
+                <a href="#">Marcas</a>
+
+            </nav>
+        </div>
             <nav>
                 <ul class="flex">
                     <li><a href="#">Vinos</a></li>
@@ -42,6 +54,17 @@
                     <li><a href="#">Marcas</a></li>
                 </ul>
             </nav>
+            <div class="search-cart flex items-center">
+                <form class="search-form">
+                    <button type="submit" class="w-100p h-40 m-10">
+                        <img src="/img/lupa.png" alt="Buscar">
+                    </button>
+                </form>
+                <div class="cart-icon">
+                    <img src="/img/carrito.png" alt="Carrito de Compras">
+                    <span>0</span>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -188,6 +211,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
